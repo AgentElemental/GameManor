@@ -1,35 +1,118 @@
 /* ====================================================================
    RESPONSIVE STYLESHEET — GAMEMANOR WEBSITE
+   Comprehensive multi-device layout rules preserving GameManor identity
    ==================================================================== */
 
-/* Tablet & Smaller Desktops (max-width: 1024px) */
+/* --------------------------------------------------------------------
+   1. LAPTOP & SMALL DESKTOP (max-width: 1024px)
+   -------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .hero-title {
-    font-size: 4rem;
+  .nav-menu {
+    gap: 4px;
   }
-  
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 3.8rem;
+  }
+
   .section-title {
     font-size: 2.8rem;
   }
-  
+
   .feature-detail-row {
     gap: 40px;
+    margin-bottom: 70px;
   }
 
   .footer-grid {
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 32px;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 28px;
   }
 }
 
-/* Tablet Portrait & Large Phones (max-width: 860px) */
+/* --------------------------------------------------------------------
+   2. TABLET PORTRAIT (max-width: 860px)
+   -------------------------------------------------------------------- */
 @media (max-width: 860px) {
+  /* Navigation: Switch to mobile drawer */
   .nav-menu {
     display: none;
   }
 
   .mobile-toggle-btn {
     display: flex;
+  }
+
+  /* Hide secondary header buttons, moved to mobile drawer */
+  .nav-actions .btn-icon,
+  .nav-actions .nav-github-btn {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  /* Mobile Drawer */
+  .mobile-drawer {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    padding: 20px 16px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 999;
+  }
+
+  .mobile-drawer.open {
+    display: flex;
+  }
+
+  .mobile-drawer .nav-link {
+    font-size: 1.1rem;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-drawer-footer {
+    padding-top: 16px;
+    margin-top: 4px;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-drawer-footer .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* Section Spacing */
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 
   .hero {
@@ -46,40 +129,53 @@
   }
 
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
   }
 
+  /* Feature Sections */
   .feature-detail-row,
   .feature-detail-row:nth-child(even) {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
     direction: ltr;
+    margin-bottom: 56px;
   }
 
   .feature-detail-visual {
     order: -1;
+    max-width: 100%;
   }
 
+  .feature-detail-title {
+    font-size: 2.2rem;
+  }
+
+  /* Preview Details Bar */
   .preview-details-bar {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
   }
 
+  /* CTA Banner */
   .cta-banner-title {
     font-size: 2.6rem;
   }
 
+  /* Download Page */
   .download-main-card {
-    padding: 32px 20px;
+    padding: 36px 24px;
+    margin-bottom: 48px;
   }
 
   .download-title {
     font-size: 2.4rem;
   }
 
+  /* Footer */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 32px;
   }
 
   .footer-brand {
@@ -94,114 +190,508 @@
   }
 }
 
-/* Mobile Phones (max-width: 600px) */
+/* --------------------------------------------------------------------
+   3. MOBILE PHONES (max-width: 600px)
+   -------------------------------------------------------------------- */
 @media (max-width: 600px) {
-  .container, .container-wide {
+  /* Container Padding */
+  .container,
+  .container-wide {
     padding-left: 16px;
     padding-right: 16px;
   }
 
+  /* Header Optimization */
+  .site-header {
+    height: 64px;
+  }
+
+  .nav-container {
+    height: 64px;
+  }
+
+  .mobile-drawer {
+    top: 64px;
+    max-height: calc(100dvh - 64px);
+  }
+
+  /* Hide download button in header on mobile to prevent overcrowding */
+  .nav-actions .btn-primary,
+  .nav-actions .nav-download-btn {
+    display: none;
+  }
+
+  .nav-brand {
+    font-size: clamp(1.2rem, 4.5vw, 1.45rem);
+    gap: 8px;
+  }
+
+  .nav-brand-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .theme-toggle-btn {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .mobile-toggle-btn {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  /* Section Spacing */
   .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
-  .hero-title {
-    font-size: 2.4rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
+  .section-header {
+    margin-bottom: 36px;
   }
 
   .section-title {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 6.5vw, 2.5rem);
+    line-height: 1.1;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .section-tag {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    margin-bottom: 12px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .hero-content {
+    margin-bottom: 32px;
+  }
+
+  .hero-badge-wrap {
+    margin-bottom: 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 7.5vw, 3rem);
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.15rem, 4vw, 1.35rem);
+    margin-bottom: 14px;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
   }
 
   .hero-actions {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .hero-actions .btn {
     width: 100%;
+    white-space: normal;
   }
 
   .hero-meta {
     flex-direction: column;
     gap: 8px;
+    align-items: center;
+    margin-top: 24px;
   }
 
-  .highlights-grid {
-    grid-template-columns: 1fr;
+  /* Window Showcase Frame */
+  .showcase-window {
+    border-radius: var(--radius-md);
   }
 
-  .benefits-grid {
-    grid-template-columns: 1fr;
+  .window-header {
+    padding: 8px 12px;
   }
 
+  .window-title {
+    font-size: 0.76rem;
+  }
+
+  /* Grid Reductions */
+  .highlights-grid,
+  .benefits-grid,
   .steps-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .highlight-card,
+  .benefit-card,
+  .step-card {
+    padding: 20px 16px;
+  }
+
+  /* Interactive Previews Section */
+  .previews-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .preview-tabs {
-    gap: 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    gap: 8px;
+  }
+
+  .preview-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .preview-tab-btn {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-    flex-grow: 1;
-    text-align: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 0.88rem;
+    padding: 8px 14px;
   }
 
+  .preview-details-bar {
+    padding: 12px 16px;
+  }
+
+  .preview-details-title {
+    font-size: 1.1rem;
+  }
+
+  .preview-details-desc {
+    font-size: 0.88rem;
+  }
+
+  /* Features Page */
+  .feature-detail-row {
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  .feature-detail-title {
+    font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+  }
+
+  .feature-detail-desc {
+    font-size: 0.98rem;
+  }
+
+  .feature-detail-list {
+    gap: 10px;
+  }
+
+  .feature-detail-item {
+    font-size: 0.92rem;
+  }
+
+  /* Download Page */
+  .download-hero {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .download-main-card {
+    padding: 24px 16px;
+    margin-bottom: 36px;
+    border-radius: var(--radius-lg);
+  }
+
+  .download-app-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+
+  .download-title {
+    font-size: clamp(1.8rem, 6vw, 2.3rem);
+    margin-bottom: 10px;
+  }
+
+  .download-meta-strip {
+    gap: 8px 10px;
+    margin-bottom: 24px;
+  }
+
+  .download-meta-pill {
+    font-size: 0.82rem;
+    padding: 5px 10px;
+  }
+
+  .download-btn-wrapper {
+    margin-bottom: 18px;
+  }
+
+  .download-btn-wrapper .btn,
+  .download-hero-btn {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    padding: 14px 20px !important;
+    font-size: 1rem !important;
+  }
+
+  .download-helper-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .install-instructions-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .install-step-card {
+    padding: 18px 16px;
+  }
+
+  .sysreq-table th,
+  .sysreq-table td {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Changelog Page */
+  .changelog-item {
+    padding: 22px 16px;
+    margin-bottom: 24px;
+  }
+
+  .changelog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .changelog-version {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+    gap: 8px;
+  }
+
+  .changelog-body {
+    font-size: 0.95rem;
+  }
+
+  .changelog-body h4 {
+    font-size: 1.15rem;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+
+  .changelog-body ul {
+    padding-left: 18px;
+  }
+
+  /* FAQ Page */
+  .faq-filter-bar {
+    margin-bottom: 24px;
+  }
+
+  .faq-search-input {
+    padding: 14px 16px 14px 44px;
+    font-size: 0.95rem;
+  }
+
+  .faq-category-nav {
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  .faq-category-btn {
+    font-size: 0.88rem;
+    padding: 6px 12px;
+  }
+
+  .faq-question-btn {
+    padding: 14px 16px;
+    font-size: 1.05rem;
+  }
+
+  .faq-answer-inner {
+    padding: 0 16px 16px 16px;
+    font-size: 0.95rem;
+  }
+
+  /* Contact Page */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .contact-card {
+    padding: 24px 16px;
+  }
+
+  .contact-fallback-box {
+    padding: 24px 16px;
+  }
+
+  /* Privacy Policy Page */
+  .policy-wrap {
+    padding: 24px 16px;
+  }
+
+  .policy-content h2 {
+    font-size: 1.4rem;
+    margin-top: 28px;
+  }
+
+  .policy-content p {
+    font-size: 0.98rem;
+  }
+
+  /* 404 Page */
+  .error-code {
+    font-size: clamp(4rem, 16vw, 6rem);
+  }
+
+  /* CTA Banner */
   .cta-banner {
-    padding: 40px 20px;
+    padding: 32px 18px;
   }
 
   .cta-banner-title {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+  }
+
+  .cta-banner-desc {
+    font-size: 1rem;
+    margin-bottom: 24px;
   }
 
   .cta-banner-actions {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .cta-banner-actions .btn {
     width: 100%;
+    white-space: normal;
   }
 
+  /* Footer */
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .footer-brand {
     grid-column: span 1;
   }
 
-  .policy-wrap {
-    padding: 24px 16px;
+  .footer-bottom {
+    padding-top: 24px;
+    margin-top: 32px;
+  }
+}
+
+/* --------------------------------------------------------------------
+   4. ULTRA-COMPACT PHONES (max-width: 360px)
+   -------------------------------------------------------------------- */
+@media (max-width: 360px) {
+  .container,
+  .container-wide {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .nav-brand {
+    font-size: 1.15rem;
+    gap: 6px;
+  }
+
+  .nav-brand-logo {
+    width: 26px;
+    height: 26px;
+  }
+
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-actions {
+    gap: 6px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.88rem;
+  }
+
+  .btn-lg {
+    padding: 12px 18px;
+    font-size: 0.92rem;
+  }
+
+  .section-tag {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+  }
+
+  .download-main-card {
+    padding: 20px 12px;
   }
 
   .changelog-item {
-    padding: 24px 16px;
+    padding: 18px 12px;
   }
 
-  .changelog-version {
-    font-size: 1.7rem;
+  .policy-wrap {
+    padding: 18px 12px;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .install-step-card {
+    padding: 16px 12px;
   }
+}
 
-  .faq-question-btn {
-    padding: 16px 18px;
-    font-size: 1.15rem;
-  }
-
-  .faq-answer-inner {
-    padding: 0 18px 18px 18px;
+/* --------------------------------------------------------------------
+   5. ACCESSIBILITY: PREFERS REDUCED MOTION
+   -------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
