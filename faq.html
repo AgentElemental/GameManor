@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions — GameManor Launcher</title>
+  <meta name="description" content="Answers to common questions about GameManor Launcher: adding games, playtime tracking, drive monitoring, backups, and privacy.">
+  <link rel="canonical" href="https://gamemanor.app/faq.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamemanor.app/faq.html">
+  <meta property="og:title" content="Frequently Asked Questions — GameManor Launcher">
+  <meta property="og:description" content="Find quick answers about library management, playtime tracking, and settings in GameManor Launcher.">
+  <meta property="og:image" content="assets/screenshots/dashboard-dark.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="GameManor Launcher Home">
+        <img src="assets/icons/icon.png" alt="GameManor Logo" class="nav-brand-logo" width="34" height="34">
+        <span class="nav-brand-text">GAME<span>MANOR</span></span>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="changelog.html" class="nav-link">Changelog</a>
+        <a href="faq.html" class="nav-link active">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle visual theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary btn-icon" aria-label="GitHub Repository">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+
+        <a href="download.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download for Windows
+        </a>
+
+        <button type="button" class="mobile-toggle-btn" aria-label="Open navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="download.html" class="nav-link">Download</a>
+      <a href="changelog.html" class="nav-link">Changelog</a>
+      <a href="faq.html" class="nav-link active">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="mobile-drawer-footer">
+        <a href="download.html" class="btn btn-primary">Download for Windows</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section" aria-labelledby="faq-page-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Knowledge Base</span>
+          <h1 id="faq-page-title" class="section-title">FREQUENTLY ASKED QUESTIONS</h1>
+          <p class="section-desc">Quick answers about library organization, playtime tracking, game importing, and system settings.</p>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="faq-filter-bar">
+          <svg class="faq-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
+          <input type="text" id="faqSearchInput" class="faq-search-input" placeholder="Search questions or keywords (e.g., 'playtime', 'import', 'backup')..." aria-label="Search FAQs">
+        </div>
+
+        <!-- Category Nav -->
+        <div class="faq-category-nav" role="tablist" aria-label="FAQ categories">
+          <button type="button" class="faq-category-btn active" data-category="all">All Questions</button>
+          <button type="button" class="faq-category-btn" data-category="general">General</button>
+          <button type="button" class="faq-category-btn" data-category="library">Library &amp; Import</button>
+          <button type="button" class="faq-category-btn" data-category="launching">Launching &amp; Tracking</button>
+          <button type="button" class="faq-category-btn" data-category="data">Data &amp; Privacy</button>
+        </div>
+
+        <!-- Accordion Items -->
+        <div class="faq-accordion" id="faqAccordion">
+
+          <!-- 1. What is GameManor Launcher? -->
+          <div class="faq-item" data-category="general">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What is GameManor Launcher?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                GameManor Launcher is a standalone Windows desktop game library and location monitor. It acts as a clean, unified dashboard where you can catalog, organize, launch, and monitor your PC games regardless of where they were purchased or installed.
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Is GameManor Launcher free? -->
+          <div class="faq-item" data-category="general">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Is GameManor Launcher free?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. GameManor Launcher is 100% free and open-source software licensed under the MIT License. There are no subscriptions, paywalls, premium tiers, or in-app advertisements.
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Which operating systems are supported? -->
+          <div class="faq-item" data-category="general">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Which operating systems are supported?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                GameManor Launcher is built for 64-bit Windows operating systems, specifically Windows 10 (Build 19041 and higher) and Windows 11.
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. How do I add a game? -->
+          <div class="faq-item" data-category="library">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>How do I add a game to my library?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                You can add games in two ways:
+                <ul style="margin-top:8px;padding-left:20px;list-style:disc;">
+                  <li><strong>Smart Game Import:</strong> Click "Scan for Games" in My Library to scan selected game folders automatically. Review discovered candidates and import them with one click.</li>
+                  <li><strong>Manual Addition:</strong> Click "Add Game" (or press <code style="padding:2px 6px;background:var(--bg-secondary);border-radius:4px;">Ctrl+N</code>) to manually enter the title, executable path, folder location, artwork, and category.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Can I organize games from different platforms? -->
+          <div class="faq-item" data-category="library">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Can I organize games from different platforms or stores?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. You can organize games regardless of whether they originate from Steam, GOG, Epic Games Store, itch.io, emulators, or DRM-free standalone installers. Games can be categorized under PC Games, Emulators, VR, or custom collections.
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Does GameManor download games for me? -->
+          <div class="faq-item" data-category="library">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Does GameManor Launcher download or purchase games for me?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                No. GameManor Launcher is a game manager, launcher, and playtime monitor, not a digital storefront or downloader. It points to existing game installations on your local or external drives.
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. How does playtime tracking work? -->
+          <div class="faq-item" data-category="launching">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>How does playtime tracking work?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                When you launch a game through GameManor Launcher, its background process manager captures the operating system process ID (PID). It monitors the process until exit, calculating playtime down to the second and recording a detailed session log in your local SQLite database.
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. What happens if a game is moved or uninstalled? -->
+          <div class="faq-item" data-category="launching">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What happens if a game is moved or an external drive is unplugged?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                GameManor Launcher includes an automatic location monitor. If an external drive is detached or a directory is moved, the game card displays an informational badge ("Drive Not Connected" or "File Missing") and safely prevents launch attempts rather than crashing.
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. How do I update GameManor Launcher? -->
+          <div class="faq-item" data-category="general">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>How do I update GameManor Launcher?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Download the latest installer from the official Download page or GitHub Releases. Running the new installer upgrades your installation in place. Your library records, settings, and playtime history in <code style="padding:2px 6px;background:var(--bg-secondary);border-radius:4px;">%APPDATA%\Elemental Games Vault</code> are completely preserved.
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Where is my library data stored? -->
+          <div class="faq-item" data-category="data">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Where is my game library information stored?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                All application data is stored locally on your PC in a SQLite database at:
+                <div style="margin:10px 0;padding:12px;background:var(--bg-secondary);border-radius:6px;font-family:var(--font-mono);font-size:0.85rem;word-break:break-all;">
+                  %APPDATA%\Elemental Games Vault\elemental_vault.sqlite
+                </div>
+                No account registration or cloud server connection is required.
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. How can I back up my data? -->
+          <div class="faq-item" data-category="data">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>How can I back up or restore my library?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Open Settings in GameManor Launcher and scroll to the <strong>Data &amp; Backup</strong> card. Click <strong>"Create Backup Now"</strong> to generate a timestamped SQLite safety copy. You can restore from a previous backup file at any time with automatic SQLite integrity validation.
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. How do I report a bug or request a feature? -->
+          <div class="faq-item" data-category="general">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>How do I report a bug or suggest a feature?</span>
+              <svg class="faq-icon-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                You can report issues and submit feature requests directly on our <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" style="color:var(--primary-red);text-decoration:underline;">GitHub Issues page</a> or reach out through our <a href="contact.html" style="color:var(--primary-red);text-decoration:underline;">Contact page</a>.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Empty search results notice -->
+        <div id="faqEmptyState" style="display:none;text-align:center;padding:40px;color:var(--text-muted);">
+          <p style="font-size:1.1rem;margin-bottom:8px;">No questions matched your search query.</p>
+          <p style="font-size:0.95rem;">Try searching for a different keyword or reach out directly on our Contact page.</p>
+        </div>
+
+        <!-- Still have questions banner -->
+        <div class="contact-fallback-box" style="margin-top:60px;">
+          <h3 style="font-family:var(--font-heading);font-size:1.6rem;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:var(--text-primary);">
+            Still Have Questions?
+          </h3>
+          <p style="font-size:1rem;color:var(--text-secondary);line-height:1.6;margin-bottom:24px;">
+            We're here to help. Contact the developer or join the community discussion on GitHub.
+          </p>
+          <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary">Visit GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-header">
+          <img src="assets/icons/icon.png" alt="GameManor Logo" class="footer-brand-logo" width="32" height="32">
+          <span>GameManor</span>
+        </div>
+        <p class="footer-desc">Your Games. Your Domain. A distraction-free desktop game vault and location monitor for Windows PC gamers.</p>
+        <span class="badge badge-red">Version 1.0.0 Stable</span>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="features.html" class="footer-link">Features</a></li>
+          <li><a href="download.html" class="footer-link">Download</a></li>
+          <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Support</h4>
+        <ul class="footer-links">
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Developer</a></li>
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" class="footer-link">Report a Bug</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Project</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a></li>
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/releases" data-bind="releasesUrl" target="_blank" rel="noopener" class="footer-link">Releases</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">System</h4>
+        <ul class="footer-links">
+          <li style="color:var(--text-secondary);font-size:0.9rem;">OS: Windows 10 &amp; 11</li>
+          <li style="color:var(--text-secondary);font-size:0.9rem;">Arch: 64-bit (x64)</li>
+          <li style="color:var(--text-secondary);font-size:0.9rem;">License: MIT</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span class="dynamic-year">2026</span> GameManor Launcher. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

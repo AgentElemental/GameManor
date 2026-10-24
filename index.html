@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameManor Launcher — Your Games. Your Domain.</title>
+  <meta name="description" content="The modern, distraction-free desktop game vault and launcher for Windows PC gamers. Organize your library, launch games, track playtime, and keep your collection under control.">
+  <link rel="canonical" href="https://gamemanor.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamemanor.app/">
+  <meta property="og:title" content="GameManor Launcher — Your Games. Your Domain.">
+  <meta property="og:description" content="The modern, distraction-free desktop game vault and launcher for Windows PC gamers.">
+  <meta property="og:image" content="assets/screenshots/dashboard-dark.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GameManor Launcher — Your Games. Your Domain.">
+  <meta name="twitter:description" content="One place for your PC gaming collection. Organize, launch, and track your games.">
+  <meta name="twitter:image" content="assets/screenshots/dashboard-dark.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="GameManor Launcher Home">
+        <img src="assets/icons/icon.png" alt="GameManor Logo" class="nav-brand-logo" width="34" height="34">
+        <span class="nav-brand-text">GAME<span>MANOR</span></span>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="changelog.html" class="nav-link">Changelog</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle visual theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary btn-icon" aria-label="GitHub Repository">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+
+        <a href="download.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download for Windows
+        </a>
+
+        <button type="button" class="mobile-toggle-btn" aria-label="Open navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="download.html" class="nav-link">Download</a>
+      <a href="changelog.html" class="nav-link">Changelog</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="mobile-drawer-footer">
+        <a href="download.html" class="btn btn-primary">Download for Windows</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <div class="hero-badge-wrap">
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            GameManor Launcher v1.0
+          </span>
+        </div>
+
+        <h1 id="hero-title" class="hero-title">
+          YOUR GAMES. <span>YOUR DOMAIN.</span>
+        </h1>
+        <p class="hero-subtitle">Meet GameManor Launcher.</p>
+        <p class="hero-description">
+          One place for your PC gaming collection. Organize your library, launch your games, track your playtime, and keep your gaming world under control.
+        </p>
+
+        <div class="hero-actions">
+          <a href="download.html" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download for Windows
+          </a>
+          <a href="features.html" class="btn btn-secondary btn-lg">
+            Explore Features
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+            Made for Windows 10 &amp; 11 (64-bit)
+          </span>
+          <span class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+            Free &amp; Open Source
+          </span>
+          <span class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Zero Telemetry or Cloud Lock-in
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero Showcase Product Preview -->
+      <div class="container hero-showcase">
+        <div class="showcase-window">
+          <div class="window-header">
+            <div class="window-controls">
+              <span class="control-dot red"></span>
+              <span class="control-dot yellow"></span>
+              <span class="control-dot green"></span>
+            </div>
+            <div class="window-title">
+              <img src="assets/icons/icon.png" alt="" width="14" height="14">
+              GameManor Launcher — Desktop Game Vault
+            </div>
+            <div style="width: 40px;"></div>
+          </div>
+          <img src="assets/screenshots/dashboard-dark.png" alt="GameManor Launcher Dashboard Interface in Dark Theme" class="showcase-image" width="1400" height="900" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Highlights Strip -->
+    <section class="highlights-section" aria-labelledby="highlights-title">
+      <div class="container">
+        <h2 id="highlights-title" class="sr-only" style="display:none;">Product Highlights</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="highlight-title">Your Game Library</h3>
+            <p class="highlight-desc">Browse your games in customizable grid or list layouts with real-time search and filter controls.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+            <h3 class="highlight-title">Direct Launching</h3>
+            <p class="highlight-desc">One-click launching for configured PC executables with instant active-process detection.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="highlight-title">Playtime Tracking</h3>
+            <p class="highlight-desc">Automatic per-session recording, historical trends, and playtime statistics stored locally in SQLite.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" x2="12" y1="22.08" y2="12"/></svg>
+            </div>
+            <h3 class="highlight-title">Smart Game Import</h3>
+            <p class="highlight-desc">Scan internal and external drives cautiously with depth controls, duplicate checks, and title cleaning.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="highlight-title">Drive Monitoring</h3>
+            <p class="highlight-desc">Continuous background status checks confirm your drives and folders are connected before you launch.</p>
+          </div>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="highlight-title">Favorites &amp; Wishlist</h3>
+            <p class="highlight-desc">Pin your go-to titles for immediate access and maintain a personal wishlist of upcoming games.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Preview Showcase Gallery -->
+    <section class="section previews-section" aria-labelledby="previews-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Preview</span>
+          <h2 id="previews-title" class="section-title">BUILT FOR PC GAMERS WHO VALUE CONTROL</h2>
+          <p class="section-desc">Inspect real views of the GameManor Launcher desktop interface in action.</p>
+        </div>
+
+        <div class="preview-tabs" role="tablist" aria-label="Interface previews">
+          <button type="button" class="preview-tab-btn active" role="tab" aria-selected="true" data-target="pane-library-grid">Library (Grid)</button>
+          <button type="button" class="preview-tab-btn" role="tab" aria-selected="false" data-target="pane-library-list">Library (List)</button>
+          <button type="button" class="preview-tab-btn" role="tab" aria-selected="false" data-target="pane-stats">Playtime Analytics</button>
+          <button type="button" class="preview-tab-btn" role="tab" aria-selected="false" data-target="pane-import">Smart Game Import</button>
+          <button type="button" class="preview-tab-btn" role="tab" aria-selected="false" data-target="pane-help">Help &amp; Shortcuts</button>
+          <button type="button" class="preview-tab-btn" role="tab" aria-selected="false" data-target="pane-settings">Settings</button>
+        </div>
+
+        <div class="preview-display-container">
+          <!-- Pane 1: Library Grid -->
+          <div id="pane-library-grid" class="preview-pane active" role="tabpanel">
+            <div class="showcase-window">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="control-dot red"></span><span class="control-dot yellow"></span><span class="control-dot green"></span>
+                </div>
+                <div class="window-title">My Library — Grid View</div>
+                <div style="width: 40px;"></div>
+              </div>
+              <img src="assets/screenshots/library-grid-dark.png" alt="GameManor Library Grid Layout" class="showcase-image" loading="lazy">
+              <div class="preview-details-bar">
+                <span class="preview-details-title">Cover Grid Presentation</span>
+                <span class="preview-details-desc">Filter by PC Games, Emulators, VR, or platform. Sort by Name, Playtime, or Last Played.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 2: Library List -->
+          <div id="pane-library-list" class="preview-pane" role="tabpanel">
+            <div class="showcase-window">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="control-dot red"></span><span class="control-dot yellow"></span><span class="control-dot green"></span>
+                </div>
+                <div class="window-title">My Library — List View</div>
+                <div style="width: 40px;"></div>
+              </div>
+              <img src="assets/screenshots/library-list-dark.png" alt="GameManor Library List Layout" class="showcase-image" loading="lazy">
+              <div class="preview-details-bar">
+                <span class="preview-details-title">Compact Information Density</span>
+                <span class="preview-details-desc">Detailed rows showing executable availability, categories, accumulated playtime, and direct actions.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 3: Playtime Analytics -->
+          <div id="pane-stats" class="preview-pane" role="tabpanel">
+            <div class="showcase-window">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="control-dot red"></span><span class="control-dot yellow"></span><span class="control-dot green"></span>
+                </div>
+                <div class="window-title">Playtime Analytics &amp; History</div>
+                <div style="width: 40px;"></div>
+              </div>
+              <img src="assets/screenshots/stats-dark.png" alt="GameManor Playtime Statistics" class="showcase-image" loading="lazy">
+              <div class="preview-details-bar">
+                <span class="preview-details-title">Per-Session Tracking</span>
+                <span class="preview-details-desc">Total hours logged, session breakdowns, most-played rankings, and recent gaming timeline.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 4: Smart Game Import -->
+          <div id="pane-import" class="preview-pane" role="tabpanel">
+            <div class="showcase-window">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="control-dot red"></span><span class="control-dot yellow"></span><span class="control-dot green"></span>
+                </div>
+                <div class="window-title">Smart Game Import Engine</div>
+                <div style="width: 40px;"></div>
+              </div>
+              <img src="assets/screenshots/smart-import-dark.png" alt="Smart Game Import Dialog" class="showcase-image" loading="lazy">
+              <div class="preview-details-bar">
+                <span class="preview-details-title">Cautious Discovery Engine</span>
+                <span class="preview-details-desc">Select scan folders, review detected titles and confidence ratings, and import without duplicate conflicts.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 5: Help & Shortcuts -->
+          <div id="pane-help" class="preview-pane" role="tabpanel">
+            <div class="showcase-window">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="control-dot red"></span><span class="control-dot yellow"></span><span class="control-dot green"></span>
+                </div>
+                <div class="window-title">Help Center &amp; Keyboard Registry</div>
+                <div style="width: 40px;"></div>
+              </div>
+              <img src="assets/screenshots/help-center-dark.png" alt="Help Center View" class="showcase-image" loading="lazy">
+              <div class="preview-details-bar">
+                <span class="preview-details-title">Keyboard-First Productivity</span>
+                <span class="preview-details-desc">Built-in shortcuts registry for rapid navigation, search hotkeys, FAQs, and support links.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 6: Settings -->
+          <div id="pane-settings" class="preview-pane" role="tabpanel">
+            <div class="showcase-window">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="control-dot red"></span><span class="control-dot yellow"></span><span class="control-dot green"></span>
+                </div>
+                <div class="window-title">Settings &amp; Preferences</div>
+                <div style="width: 40px;"></div>
+              </div>
+              <img src="assets/screenshots/settings-dark.png" alt="Settings & Appearance Options" class="showcase-image" loading="lazy">
+              <div class="preview-details-bar">
+                <span class="preview-details-title">Total Customization</span>
+                <span class="preview-details-desc">Theme switching, Windows startup toggle, system tray behavior, backup management, and notifications.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why GameManor Section -->
+    <section class="section section-alt" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why GameManor?</span>
+          <h2 id="why-title" class="section-title">YOUR COLLECTION. YOUR RULES.</h2>
+          <p class="section-desc">
+            GameManor Launcher helps you manage your PC game collection in one organized desktop interface, without bloatware, advertisements, or storefront lock-in.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10M7 12h10M7 17h10"/></svg>
+            </div>
+            <h3 class="benefit-title">Centralized Personal Library</h3>
+            <p class="benefit-desc">
+              Organize games across Steam, GOG, Epic, itch.io, emulators, and standalone directories under one unified, responsive launcher.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3 class="benefit-title">Local SQLite Storage</h3>
+            <p class="benefit-desc">
+              All your records, play sessions, and settings reside in a local SQLite database on your machine. Your library data remains 100% private.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 class="benefit-title">Accurate Session Tracking</h3>
+            <p class="benefit-desc">
+              Process monitoring tracks when your game starts and stops, calculating playtime down to the second without background telemetry.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m10 15 5-3-5-3v6Z"/><rect width="20" height="14" x="2" y="5" rx="2"/></svg>
+            </div>
+            <h3 class="benefit-title">Direct Executable Launching</h3>
+            <p class="benefit-desc">
+              Configure working directories, launch parameters, and custom binaries. Games start with direct OS execution rather than vendor wrappers.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </div>
+            <h3 class="benefit-title">Flexible Customization</h3>
+            <p class="benefit-desc">
+              Switch between gaming dark mode and crisp light mode. Manage system tray minimization, Windows startup, and customizable view filters.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            </div>
+            <h3 class="benefit-title">Safe Data Management</h3>
+            <p class="benefit-desc">
+              Integrated backup creation, integrity verification, and restore tools make safeguarding your gaming library effortless.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (3 Steps) -->
+    <section class="section" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Simple Setup</span>
+          <h2 id="steps-title" class="section-title">HOW IT WORKS</h2>
+          <p class="section-desc">Get your desktop game vault organized in three straightforward steps.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h3 class="step-title">Add Your Games</h3>
+            <p class="step-desc">
+              Use Smart Game Import to scan your installation folders automatically, or add titles manually with custom artwork and paths.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h3 class="step-title">Organize Your Collection</h3>
+            <p class="step-desc">
+              Group titles into PC Games, Emulators, or VR. Tag favorites, mark planned downloads, and verify drive connection status.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h3 class="step-title">Launch &amp; Track Playtime</h3>
+            <p class="step-desc">
+              Launch games with one click. GameManor monitors the active process, records your session duration, and updates your playtime statistics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="cta-banner-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-banner">
+          <h2 id="cta-title" class="cta-banner-title">YOUR NEXT SESSION STARTS HERE.</h2>
+          <p class="cta-banner-desc">Bring your PC game collection together with GameManor Launcher.</p>
+          <div class="cta-banner-actions">
+            <a href="download.html" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Get GameManor Launcher
+            </a>
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-header">
+          <img src="assets/icons/icon.png" alt="GameManor Logo" class="footer-brand-logo" width="32" height="32">
+          <span>GameManor</span>
+        </div>
+        <p class="footer-desc">
+          Your Games. Your Domain. A distraction-free desktop game vault and location monitor for Windows PC gamers.
+        </p>
+        <span class="badge badge-red">Version 1.0.0 Stable</span>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="features.html" class="footer-link">Features</a></li>
+          <li><a href="download.html" class="footer-link">Download</a></li>
+          <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Support</h4>
+        <ul class="footer-links">
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Developer</a></li>
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" class="footer-link">Report a Bug</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Project</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a></li>
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/releases" data-bind="releasesUrl" target="_blank" rel="noopener" class="footer-link">Releases</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">System</h4>
+        <ul class="footer-links">
+          <li style="color:var(--text-secondary);font-size:0.9rem;">OS: Windows 10 &amp; 11</li>
+          <li style="color:var(--text-secondary);font-size:0.9rem;">Arch: 64-bit (x64)</li>
+          <li style="color:var(--text-secondary);font-size:0.9rem;">License: MIT</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span class="dynamic-year">2026</span> GameManor Launcher. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

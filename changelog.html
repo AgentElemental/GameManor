@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog &amp; Release Notes — GameManor Launcher</title>
+  <meta name="description" content="View the version history, new features, performance improvements, and bug fixes for GameManor Launcher.">
+  <link rel="canonical" href="https://gamemanor.app/changelog.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamemanor.app/changelog.html">
+  <meta property="og:title" content="Changelog &amp; Release Notes — GameManor Launcher">
+  <meta property="og:description" content="Official release history and changelog for GameManor Launcher.">
+  <meta property="og:image" content="assets/screenshots/dashboard-dark.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="GameManor Launcher Home">
+        <img src="assets/icons/icon.png" alt="GameManor Logo" class="nav-brand-logo" width="34" height="34">
+        <span class="nav-brand-text">GAME<span>MANOR</span></span>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="changelog.html" class="nav-link active">Changelog</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle visual theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary btn-icon" aria-label="GitHub Repository">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+
+        <a href="download.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download for Windows
+        </a>
+
+        <button type="button" class="mobile-toggle-btn" aria-label="Open navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="download.html" class="nav-link">Download</a>
+      <a href="changelog.html" class="nav-link active">Changelog</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <div class="mobile-drawer-footer">
+        <a href="download.html" class="btn btn-primary">Download for Windows</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section" aria-labelledby="changelog-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Release History</span>
+          <h1 id="changelog-title" class="section-title">VERSION CHANGELOG</h1>
+          <p class="section-desc">Track feature releases, architectural upgrades, and bug fixes for GameManor Launcher.</p>
+        </div>
+
+        <div id="changelogLoading" style="text-align:center;padding:20px;color:var(--text-muted);display:none;">
+          Checking for published GitHub releases...
+        </div>
+
+        <div class="changelog-container" id="changelogContainer">
+          <!-- Release: v1.0.0 (Initial Official Production Release) -->
+          <article class="changelog-item">
+            <div class="changelog-header">
+              <h2 class="changelog-version">
+                v1.0.0 Stable
+                <span class="badge badge-red">Latest Release</span>
+              </h2>
+              <span class="changelog-date">October 2026</span>
+            </div>
+
+            <div class="changelog-body">
+              <p>
+                The initial stable release of <strong>GameManor Launcher</strong>, providing a modern, private desktop vault for organizing PC game libraries, tracking gameplay sessions, and launching executables with zero third-party telemetry.
+              </p>
+
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                New Features
+              </h4>
+              <ul>
+                <li><strong>Smart Game Import:</strong> Added a cautious directory scanner that identifies game installations with Unity, Unreal, GOG, and Steam heuristics, filters out noise executables, and handles path normalization to prevent duplicate imports.</li>
+                <li><strong>Help Center:</strong> Created a dedicated in-app Help Center with interactive cards for Keyboard Shortcuts, FAQs, and Contact support.</li>
+                <li><strong>Centralized Shortcut Registry:</strong> Added <code style="padding:2px 6px;background:var(--bg-secondary);border-radius:4px;">Ctrl+K</code> search focus, numbered navigation <code style="padding:2px 6px;background:var(--bg-secondary);border-radius:4px;">Ctrl+1..5</code>, <code style="padding:2px 6px;background:var(--bg-secondary);border-radius:4px;">Ctrl+N</code> add game, and input isolation.</li>
+                <li><strong>Dual Theme System:</strong> Fully audited high-contrast Light mode alongside the signature dark red-and-black gaming aesthetic.</li>
+                <li><strong>Maintenance Tools:</strong> Safe cache clearing, playtime statistic resets, and pre-reset SQLite database backup creation.</li>
+              </ul>
+
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Architecture &amp; Reliability
+              </h4>
+              <ul>
+                <li><strong>SQLite Database Migration Engine:</strong> Versioned, transactional migrations preserving existing game records, playtime sessions, and settings.</li>
+                <li><strong>Real-Time Process Monitoring:</strong> Live detection of running executables using OS process IDs with instant top-bar status indicators.</li>
+                <li><strong>Location &amp; Drive Availability Monitor:</strong> Background checker detecting missing files and unplugged external drives.</li>
+                <li><strong>Custom Frameless Title Bar:</strong> Integrated custom title bar with minimize, maximize, restore, and close controls.</li>
+              </ul>
+
+              <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
+                <a href="download.html" class="btn btn-primary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                  Download v1.0.0
+                </a>
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/releases" data-bind="releasesUrl" target="_blank" rel="noopener" class="btn btn-secondary">
+                  Release on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- GitHub Releases Prompt -->
+        <div class="contact-fallback-box" style="margin-top:40px;">
+          <h3 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:var(--text-primary);">
+            Explore All GitHub Releases &amp; Commits
+          </h3>
+          <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">
+            For raw commit diffs, automated build artifacts, and past release tags, visit the official public GitHub repository.
+          </p>
+          <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/releases" data-bind="releasesUrl" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Open GitHub Releases
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-header">
+          <img src="assets/icons/icon.png" alt="GameManor Logo" class="footer-brand-logo" width="32" height="32">
+          <span>GameManor</span>
+        </div>
+        <p class="footer-desc">Your Games. Your Domain. A distraction-free desktop game vault and location monitor for Windows PC gamers.</p>
+        <span class="badge badge-red">Version 1.0.0 Stable</span>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="features.html" class="footer-link">Features</a></li>
+          <li><a href="download.html" class="footer-link">Download</a></li>
+          <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Support</h4>
+        <ul class="footer-links">
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Developer</a></li>
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" class="footer-link">Report a Bug</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Project</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a></li>
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/releases" data-bind="releasesUrl" target="_blank" rel="noopener" class="footer-link">Releases</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">System</h4>
+        <ul class="footer-links">
+          <li style="color:var(--text-secondary);font-size:0.9rem;">OS: Windows 10 &amp; 11</li>
+          <li style="color:var(--text-secondary);font-size:0.9rem;">Arch: 64-bit (x64)</li>
+          <li style="color:var(--text-secondary);font-size:0.9rem;">License: MIT</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span class="dynamic-year">2026</span> GameManor Launcher. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/download.js"></script>
+</body>
+</html>
