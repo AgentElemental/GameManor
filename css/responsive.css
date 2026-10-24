@@ -1,0 +1,207 @@
+/* ====================================================================
+   RESPONSIVE STYLESHEET — GAMEMANOR WEBSITE
+   ==================================================================== */
+
+/* Tablet & Smaller Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+  }
+  
+  .feature-detail-row {
+    gap: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+/* Tablet Portrait & Large Phones (max-width: 860px) */
+@media (max-width: 860px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .feature-detail-row,
+  .feature-detail-row:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    direction: ltr;
+  }
+
+  .feature-detail-visual {
+    order: -1;
+  }
+
+  .preview-details-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .cta-banner-title {
+    font-size: 2.6rem;
+  }
+
+  .download-main-card {
+    padding: 32px 20px;
+  }
+
+  .download-title {
+    font-size: 2.4rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+/* Mobile Phones (max-width: 600px) */
+@media (max-width: 600px) {
+  .container, .container-wide {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-tabs {
+    gap: 6px;
+  }
+
+  .preview-tab-btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .cta-banner {
+    padding: 40px 20px;
+  }
+
+  .cta-banner-title {
+    font-size: 2rem;
+  }
+
+  .cta-banner-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-banner-actions .btn {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .policy-wrap {
+    padding: 24px 16px;
+  }
+
+  .changelog-item {
+    padding: 24px 16px;
+  }
+
+  .changelog-version {
+    font-size: 1.7rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-question-btn {
+    padding: 16px 18px;
+    font-size: 1.15rem;
+  }
+
+  .faq-answer-inner {
+    padding: 0 18px 18px 18px;
+  }
+}
