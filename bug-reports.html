@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report a Bug — GameManor Launcher</title>
+  <meta name="description" content="Report a software bug, crash, or unexpected behavior in GameManor Launcher. Help us improve your desktop gaming vault.">
+  <link rel="canonical" href="https://gamemanor.app/bug-reports.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamemanor.app/bug-reports.html">
+  <meta property="og:title" content="Report a Bug — GameManor Launcher">
+  <meta property="og:description" content="Submit structured bug reports with logs and screenshots directly to the GameManor team.">
+  <meta property="og:image" content="assets/screenshots/dashboard-dark.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="GameManor Launcher Home">
+        <img src="assets/icons/icon.png" alt="GameManor Logo" class="nav-brand-logo" width="34" height="34">
+        <span class="nav-brand-text">GAME<span>MANOR</span></span>
+      </a>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="download.html" class="nav-link">Download</a>
+        <a href="changelog.html" class="nav-link">Changelog</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle visual theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary btn-icon nav-github-btn" aria-label="GitHub Repository">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+
+        <a href="download.html" class="btn btn-primary nav-download-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download for Windows
+        </a>
+
+        <button type="button" class="mobile-toggle-btn" aria-label="Open navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="features.html" class="nav-link">Features</a>
+      <a href="download.html" class="nav-link">Download</a>
+      <a href="changelog.html" class="nav-link">Changelog</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="bug-reports.html" class="nav-link active">Report a Bug</a>
+      <div class="mobile-drawer-footer">
+        <a href="download.html" class="btn btn-primary">Download for Windows</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section" aria-labelledby="bug-heading">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-tag">Issue Tracker</span>
+          <h1 id="bug-heading" class="section-title">REPORT A BUG</h1>
+          <p class="section-desc">Encountered an unexpected crash, import anomaly, or UI defect? Submit a structured report with screenshots to help us resolve it quickly.</p>
+        </div>
+
+        <!-- Form Switcher Tabs -->
+        <div class="form-tab-nav" role="tablist" aria-label="Support form selection">
+          <a href="contact.html" class="form-tab-btn" role="tab" aria-selected="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Contact Us
+          </a>
+          <a href="bug-reports.html" class="form-tab-btn active" role="tab" aria-selected="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
+            Report a Bug
+          </a>
+        </div>
+
+        <!-- Status Message Banner -->
+        <div id="bugStatusBanner" class="form-status-banner" role="alert" aria-live="polite"></div>
+
+        <!-- Main Bug Report Form Card -->
+        <div class="form-card">
+          <form id="bugReportForm" novalidate>
+            <!-- Anti-spam Honeypot -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="bugWebsite">Leave this field blank</label>
+              <input type="text" id="bugWebsite" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-grid">
+              <!-- Section 1: Submitter Info -->
+              <div class="form-group">
+                <label for="bugFullName" class="form-label">
+                  Full Name <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="bugFullName" name="fullName" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+                <div class="form-error-msg" role="alert">Please enter your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="bugEmailAddress" class="form-label">
+                  Email Address <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="email" id="bugEmailAddress" name="emailAddress" class="form-input" placeholder="name@example.com" required autocomplete="email">
+                <div class="form-hint">Used only for follow-up questions regarding this issue.</div>
+                <div class="form-error-msg" role="alert">Please enter a valid email address.</div>
+              </div>
+
+              <!-- Section 2: Bug Classification -->
+              <div class="form-group full-width">
+                <label for="bugTitle" class="form-label">
+                  Bug Title <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="bugTitle" name="bugTitle" class="form-input" placeholder="Brief summary of the defect (e.g. Smart Import misses custom game directory)" required>
+                <div class="form-error-msg" role="alert">Please provide a clear bug title.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="bugCategory" class="form-label">
+                  Bug Category <span class="required" aria-hidden="true">*</span>
+                </label>
+                <div class="form-select-wrapper">
+                  <select id="bugCategory" name="bugCategory" class="form-select" required>
+                    <option value="" disabled selected>Select category...</option>
+                    <option value="Game Launching">Game Launching</option>
+                    <option value="Game Library">Game Library</option>
+                    <option value="Playtime Tracking">Playtime Tracking</option>
+                    <option value="Installation Detection">Installation Detection</option>
+                    <option value="Smart Game Import">Smart Game Import</option>
+                    <option value="Settings">Settings</option>
+                    <option value="Automatic Updates">Automatic Updates</option>
+                    <option value="Data &amp; Backup">Data &amp; Backup</option>
+                    <option value="User Interface">User Interface</option>
+                    <option value="Performance">Performance</option>
+                  </select>
+                  <svg class="form-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="form-error-msg" role="alert">Please select the affected category.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="bugSeverity" class="form-label">
+                  Severity <span class="required" aria-hidden="true">*</span>
+                </label>
+                <div class="form-select-wrapper">
+                  <select id="bugSeverity" name="severity" class="form-select" required>
+                    <option value="" disabled selected>Select impact severity...</option>
+                    <option value="Low — Minor inconvenience">Low — Minor inconvenience</option>
+                    <option value="Medium — Feature partially affected">Medium — Feature partially affected</option>
+                    <option value="High — Major feature broken">High — Major feature broken</option>
+                    <option value="Critical — App unusable or serious data-loss risk">Critical — App unusable or serious data-loss risk</option>
+                  </select>
+                  <svg class="form-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="form-error-msg" role="alert">Please select the issue severity.</div>
+              </div>
+
+              <!-- Section 3: Environment Info -->
+              <div class="form-group">
+                <label for="bugWindowsVersion" class="form-label">
+                  Windows Version <span class="required" aria-hidden="true">*</span>
+                </label>
+                <div class="form-select-wrapper">
+                  <select id="bugWindowsVersion" name="windowsVersion" class="form-select" required>
+                    <option value="" disabled selected>Select Windows OS...</option>
+                    <option value="Windows 11 (64-bit)">Windows 11 (64-bit)</option>
+                    <option value="Windows 10 (64-bit)">Windows 10 (64-bit)</option>
+                  </select>
+                  <svg class="form-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="form-error-msg" role="alert">Please select your Windows version.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="bugLauncherVersion" class="form-label">
+                  Launcher Version <span class="form-label-optional">(Optional)</span>
+                </label>
+                <input type="text" id="bugLauncherVersion" name="launcherVersion" class="form-input" placeholder="e.g. 1.0.0" value="1.0.0">
+                <div class="form-hint">Find in the title bar or Settings → About.</div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="bugAffectedFeature" class="form-label">
+                  Affected Game or Feature <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="bugAffectedFeature" name="affectedFeature" class="form-input" placeholder="e.g. Smart Game Import, Cyberpunk 2077, Drive D: scan" required>
+                <div class="form-error-msg" role="alert">Please specify the affected feature or game.</div>
+              </div>
+
+              <!-- Section 4: Reproduction Steps & Observed Behavior -->
+              <div class="form-group full-width">
+                <label for="bugSteps" class="form-label">
+                  Steps to Reproduce <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea id="bugSteps" name="stepsToReproduce" class="form-textarea" placeholder="Numbered steps to trigger the bug:&#10;1. Open GameManor Launcher&#10;2. Click on Smart Game Import&#10;3. Select external drive..." required></textarea>
+                <div class="form-error-msg" role="alert">Please describe the steps to reproduce the issue.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="bugExpected" class="form-label">
+                  Expected Behavior <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea id="bugExpected" name="expectedBehavior" class="form-textarea" placeholder="What should have happened?" required></textarea>
+                <div class="form-error-msg" role="alert">Please describe the expected behavior.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="bugActual" class="form-label">
+                  Actual Behavior <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea id="bugActual" name="actualBehavior" class="form-textarea" placeholder="What actually happened instead?" required></textarea>
+                <div class="form-error-msg" role="alert">Please describe the actual behavior.</div>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="bugErrorMsg" class="form-label">
+                  Error Message or Exit Code <span class="form-label-optional">(Optional)</span>
+                </label>
+                <textarea id="bugErrorMsg" name="errorMessage" class="form-textarea" placeholder="Paste exact error dialog text, crash code (e.g. 0xC0000005), or terminal output if available..."></textarea>
+              </div>
+
+              <!-- Section 5: Screenshot & Video Attachments -->
+              <div class="form-group full-width attachment-section">
+                <label class="form-label">
+                  Screenshots &amp; Videos <span class="form-label-optional">(Optional)</span>
+                </label>
+                
+                <div class="attachment-dropzone">
+                  <input type="file" class="attachment-file-input" multiple accept=".png,.jpg,.jpeg,.webp,.mp4,.webm" aria-label="Attach screenshots or screen recordings">
+                  <div class="attachment-dropzone-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  </div>
+                  <div class="attachment-dropzone-title">Drop files here or click to browse</div>
+                  <p class="attachment-dropzone-desc">
+                    Supported: PNG, JPG, WebP, MP4, WebM<br>
+                    Limits: Maximum 6 files &bull; Up to 5 MB per file &bull; 8 MB total per submission
+                  </p>
+                </div>
+
+                <!-- Attachment Error Message -->
+                <div class="form-error-msg attachment-error-msg" role="alert"></div>
+
+                <!-- Chosen Files List -->
+                <div class="attachment-list" aria-live="polite"></div>
+
+                <!-- Total Storage Meter -->
+                <div class="attachment-meter-wrap">
+                  <div class="attachment-meter-bar">
+                    <div class="attachment-meter-fill"></div>
+                  </div>
+                  <span class="attachment-meter-text">0 / 6 files (0 B of 8 MB)</span>
+                </div>
+              </div>
+
+              <!-- Section 6: Additional Details -->
+              <div class="form-group full-width">
+                <label for="bugDetails" class="form-label">
+                  Additional Details <span class="form-label-optional">(Optional)</span>
+                </label>
+                <textarea id="bugDetails" name="additionalDetails" class="form-textarea" placeholder="Antivirus software, custom drive setups, display scaling, or other relevant PC hardware configuration..."></textarea>
+              </div>
+            </div>
+
+            <!-- Submit Button Area -->
+            <div class="form-actions-area">
+              <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <span class="btn-text">Submit Bug Report</span>
+              </button>
+              <p class="form-privacy-note">
+                Reports are inspected directly by GameManor maintainers. Do not include passwords or sensitive personal data in error logs.
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Alternative GitHub Channel Note -->
+        <div class="contact-fallback-box" style="margin-top:20px;">
+          <h3 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:var(--text-primary);">
+            Prefer Public GitHub Issue Tracking?
+          </h3>
+          <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;margin-bottom:16px;">
+            If you already have a GitHub account, you can also search existing issues, comment on community discussions, or file a bug directly in our repository using the official issue template.
+          </p>
+          <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Browse Open GitHub Issues
+            </a>
+            <a href="faq.html" class="btn btn-outline">
+              Check Common Solutions in FAQ
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-header">
+          <img src="assets/icons/icon.png" alt="GameManor Logo" class="footer-brand-logo" width="32" height="32">
+          <span>GameManor</span>
+        </div>
+        <p class="footer-desc">Your Games. Your Domain. A distraction-free desktop game vault and location monitor for Windows PC gamers.</p>
+        <span class="badge badge-red">Version 1.0.0 Stable</span>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="features.html" class="footer-link">Features</a></li>
+          <li><a href="download.html" class="footer-link">Download</a></li>
+          <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Support</h4>
+        <ul class="footer-links">
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Developer</a></li>
+          <li><a href="bug-reports.html" class="footer-link">Report a Bug</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Project</h4>
+        <ul class="footer-links">
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="footer-link">GitHub Repository</a></li>
+          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/releases" data-bind="releasesUrl" target="_blank" rel="noopener" class="footer-link">Releases</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">System</h4>
+        <ul class="footer-links">
+          <li style="color:var(--text-secondary);font-size:0.9rem;">OS: Windows 10 &amp; 11</li>
+          <li style="color:var(--text-secondary);font-size:0.9rem;">Arch: 64-bit (x64)</li>
+          <li style="color:var(--text-secondary);font-size:0.9rem;">License: MIT</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span class="dynamic-year">2026</span> GameManor Launcher. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

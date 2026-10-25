@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us — GameManor Launcher</title>
-  <meta name="description" content="Get in touch with the GameManor Launcher team. Report bugs, suggest new features, or request technical support.">
+  <meta name="description" content="Get in touch with the GameManor Launcher team. Send inquiries, suggest new features, or request technical support.">
   <link rel="canonical" href="https://gamemanor.app/contact.html">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gamemanor.app/contact.html">
   <meta property="og:title" content="Contact Us — GameManor Launcher">
-  <meta property="og:description" content="Get help, report issues, or send feedback to the developer.">
+  <meta property="og:description" content="Send inquiries, suggestions, or support requests directly to the GameManor development team.">
   <meta property="og:image" content="assets/screenshots/dashboard-dark.png">
 
   <!-- Favicons -->
@@ -21,6 +21,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -71,6 +72,7 @@
       <a href="changelog.html" class="nav-link">Changelog</a>
       <a href="faq.html" class="nav-link">FAQ</a>
       <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="bug-reports.html" class="nav-link">Report a Bug</a>
       <div class="mobile-drawer-footer">
         <a href="download.html" class="btn btn-primary">Download for Windows</a>
         <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher" data-bind="repoUrl" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Repository</a>
@@ -81,22 +83,148 @@
   <main id="main-content">
     <section class="section" aria-labelledby="contact-heading">
       <div class="container">
+        <!-- Section Header -->
         <div class="section-header">
-          <span class="section-tag">Direct Channels</span>
-          <h1 id="contact-heading" class="section-title">GET IN TOUCH</h1>
-          <p class="section-desc">Have a question, encountered an unexpected bug, or want to contribute? Connect through our official channels.</p>
+          <span class="section-tag">Direct Communication</span>
+          <h1 id="contact-heading" class="section-title">CONTACT US</h1>
+          <p class="section-desc">Have a question, feedback, or need technical assistance with GameManor Launcher? Submit your message below.</p>
         </div>
 
-        <!-- 4 Channels Grid -->
+        <!-- Form Switcher Tabs -->
+        <div class="form-tab-nav" role="tablist" aria-label="Support form selection">
+          <a href="contact.html" class="form-tab-btn active" role="tab" aria-selected="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Contact Us
+          </a>
+          <a href="bug-reports.html" class="form-tab-btn" role="tab" aria-selected="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
+            Report a Bug
+          </a>
+        </div>
+
+        <!-- Status Message Banner -->
+        <div id="contactStatusBanner" class="form-status-banner" role="alert" aria-live="polite"></div>
+
+        <!-- Main Form Card -->
+        <div class="form-card">
+          <form id="contactForm" novalidate>
+            <!-- Anti-spam Honeypot -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="contactWebsite">Leave this field blank</label>
+              <input type="text" id="contactWebsite" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="contactFullName" class="form-label">
+                  Full Name <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="contactFullName" name="fullName" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+                <div class="form-error-msg" role="alert">Please enter your full name.</div>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label for="contactEmailAddress" class="form-label">
+                  Email Address <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="email" id="contactEmailAddress" name="emailAddress" class="form-input" placeholder="name@example.com" required autocomplete="email">
+                <div class="form-error-msg" role="alert">Please enter a valid email address.</div>
+              </div>
+
+              <!-- Reason for Contact -->
+              <div class="form-group">
+                <label for="contactReason" class="form-label">
+                  Reason for Contact <span class="required" aria-hidden="true">*</span>
+                </label>
+                <div class="form-select-wrapper">
+                  <select id="contactReason" name="reasonForContact" class="form-select" required>
+                    <option value="" disabled selected>Select an inquiry reason...</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Feature Request">Feature Request</option>
+                    <option value="Technical Support">Technical Support</option>
+                    <option value="Business Inquiry">Business Inquiry</option>
+                  </select>
+                  <svg class="form-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="form-error-msg" role="alert">Please select a reason for contact.</div>
+              </div>
+
+              <!-- Operating System -->
+              <div class="form-group">
+                <label for="contactOS" class="form-label">
+                  Operating System <span class="required" aria-hidden="true">*</span>
+                </label>
+                <div class="form-select-wrapper">
+                  <select id="contactOS" name="operatingSystem" class="form-select" required>
+                    <option value="" disabled selected>Select your Windows version...</option>
+                    <option value="Windows 11 (64-bit)">Windows 11 (64-bit)</option>
+                    <option value="Windows 10 (64-bit)">Windows 10 (64-bit)</option>
+                  </select>
+                  <svg class="form-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="form-error-msg" role="alert">Please select your operating system.</div>
+              </div>
+
+              <!-- Subject -->
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">
+                  Subject <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="What is your message regarding?" required>
+                <div class="form-error-msg" role="alert">Please enter a subject.</div>
+              </div>
+
+              <!-- Launcher Version (Optional) -->
+              <div class="form-group">
+                <label for="contactVersion" class="form-label">
+                  Launcher Version <span class="form-label-optional">(Optional)</span>
+                </label>
+                <input type="text" id="contactVersion" name="launcherVersion" class="form-input" placeholder="e.g. 1.0.0" value="1.0.0">
+                <div class="form-hint">Shown in GameManor Launcher title bar or Settings.</div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group full-width">
+                <label for="contactMessage" class="form-label">
+                  Message <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea id="contactMessage" name="message" class="form-textarea textarea-tall" placeholder="Provide details, questions, or feedback here..." required></textarea>
+                <div class="form-error-msg" role="alert">Please enter your message.</div>
+              </div>
+            </div>
+
+            <!-- Submit Button Area -->
+            <div class="form-actions-area">
+              <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <span class="btn-text">Submit Contact Request</span>
+              </button>
+              <p class="form-privacy-note">
+                Your communication is sent directly to our developer team. We never sell or share your contact details. 
+                Read our <a href="privacy.html" style="color:var(--primary-red);text-decoration:underline;">Privacy Policy</a>.
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Secondary Channels Grid -->
+        <div class="section-header" style="margin-top:20px;margin-bottom:24px;">
+          <span class="section-tag">Alternative Channels</span>
+          <h2 class="section-title" style="font-size:1.8rem;">OTHER WAYS TO REACH US</h2>
+        </div>
+
         <div class="contact-grid">
-          <!-- Card 1: General Inquiries -->
+          <!-- Card 1: Direct Email -->
           <div class="contact-card">
             <div class="contact-card-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
-            <h2 class="contact-card-title">General Inquiries</h2>
-            <p class="contact-card-desc">Questions about the project, licensing, or general feedback about GameManor Launcher.</p>
-            <a href="mailto:support@gamemanor.app?subject=GameManor%20Launcher%20General%20Inquiry" data-bind="contactEmail" class="btn btn-secondary" style="width:100%;">
+            <h3 class="contact-card-title">Direct Email</h3>
+            <p class="contact-card-desc">Prefer regular email? Reach our support inbox directly for urgent inquiries.</p>
+            <a href="mailto:support@gamemanor.app?subject=GameManor%20Launcher%20Inquiry" data-bind="contactEmail" class="btn btn-secondary" style="width:100%;">
               Send Email
             </a>
           </div>
@@ -106,49 +234,36 @@
             <div class="contact-card-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
             </div>
-            <h2 class="contact-card-title">Bug Reports</h2>
-            <p class="contact-card-desc">Encountered an issue with game launching, drive detection, or importing? File a GitHub issue.</p>
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">
+            <h3 class="contact-card-title">Bug Reports</h3>
+            <p class="contact-card-desc">Encountered an issue with game launching or drive scanning? File a detailed bug report.</p>
+            <a href="bug-reports.html" class="btn btn-primary" style="width:100%;">
+              Report a Bug
+            </a>
+          </div>
+
+          <!-- Card 3: GitHub Issues -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <h3 class="contact-card-title">GitHub Issues</h3>
+            <p class="contact-card-desc">Track issues transparently, discuss pull requests, and contribute to the open-source code.</p>
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" class="btn btn-secondary" style="width:100%;">
               Open GitHub Issue
             </a>
           </div>
 
-          <!-- Card 3: Feature Requests -->
+          <!-- Card 4: FAQ Knowledgebase -->
           <div class="contact-card">
             <div class="contact-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             </div>
-            <h2 class="contact-card-title">Feature Requests</h2>
-            <p class="contact-card-desc">Have ideas for new launcher features, integrations, or usability improvements? Share them with us.</p>
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" class="btn btn-secondary" style="width:100%;">
-              Suggest Feature
+            <h3 class="contact-card-title">Help &amp; FAQ</h3>
+            <p class="contact-card-desc">Find quick answers to common questions about installation, Smart Import, and data backups.</p>
+            <a href="faq.html" class="btn btn-secondary" style="width:100%;">
+              View FAQs
             </a>
           </div>
-
-          <!-- Card 4: Technical Support -->
-          <div class="contact-card">
-            <div class="contact-card-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            </div>
-            <h2 class="contact-card-title">Technical Support</h2>
-            <p class="contact-card-desc">Need assistance recovering a database backup or configuring custom launcher paths?</p>
-            <a href="mailto:support@gamemanor.app?subject=GameManor%20Technical%20Support%20Request" data-bind="contactEmail" class="btn btn-secondary" style="width:100%;">
-              Email Support
-            </a>
-          </div>
-        </div>
-
-        <!-- Privacy & Communication Transparency Box -->
-        <div class="contact-fallback-box">
-          <h3 style="font-family:var(--font-heading);font-size:1.4rem;font-weight:800;text-transform:uppercase;margin-bottom:8px;color:var(--text-primary);">
-            Transparent Communication Note
-          </h3>
-          <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;margin-bottom:12px;">
-            As a static, privacy-first website, we do not embed third-party web forms or third-party tracking scripts that route messages through marketing intermediaries.
-          </p>
-          <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;">
-            All inquiries go directly to our developer inbox or the transparent, public issue tracker on GitHub. For more information on how we handle data, read our <a href="privacy.html" style="color:var(--primary-red);text-decoration:underline;">Privacy Policy</a>.
-          </p>
         </div>
 
       </div>
@@ -182,7 +297,7 @@
         <ul class="footer-links">
           <li><a href="faq.html" class="footer-link">FAQ</a></li>
           <li><a href="contact.html" class="footer-link">Contact Developer</a></li>
-          <li><a href="https://github.com/YOUR_GITHUB_USERNAME/gamemanor-launcher/issues" data-bind="issuesUrl" target="_blank" rel="noopener" class="footer-link">Report a Bug</a></li>
+          <li><a href="bug-reports.html" class="footer-link">Report a Bug</a></li>
         </ul>
       </div>
 
@@ -216,5 +331,6 @@
 
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
 </body>
 </html>

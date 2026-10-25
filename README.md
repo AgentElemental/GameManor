@@ -22,7 +22,8 @@ website/
 ├── download.html         # Windows download center & system requirements
 ├── changelog.html        # Release notes & version history with GitHub API support
 ├── faq.html              # Searchable & categorized accordion FAQ
-├── contact.html          # Support channels & issue reporting
+├── contact.html          # Contact Us form (Google Apps Script / Netlify function integration)
+├── bug-reports.html      # Bug Reports form with multi-file attachment dropzone & size limits
 ├── privacy.html          # Transparent privacy policy
 ├── 404.html              # Branded 404 error page
 ├── assets/
@@ -31,12 +32,17 @@ website/
 │   └── screenshots/      # 8 real high-resolution screenshots from GameManor Launcher
 ├── css/
 │   ├── style.css         # Brand design tokens, dark & light themes, layout components
+│   ├── forms.css         # Contact & Bug Reports form styling, dropzone, storage meter, status banners
 │   └── responsive.css    # Tablet & mobile responsive media queries
 ├── js/
-│   ├── config.js         # Central configuration for repository, releases, and emails
+│   ├── config.js         # Central configuration for repository, releases, and form endpoints
 │   ├── main.js           # Theme switcher, navigation, mobile drawer, accordions, search
-│   └── download.js       # GitHub Releases API resolution & sanitized changelog loader
-├── netlify.toml          # Netlify static deployment & security response headers
+│   ├── download.js       # GitHub Releases API resolution & sanitized changelog loader
+│   └── forms.js          # Form validation, attachment handling (Base64), submission & prefilled fallbacks
+├── netlify/
+│   └── functions/
+│       └── submit-form.js # Serverless proxy to Google Apps Script bypassing browser CORS preflight
+├── netlify.toml          # Netlify static deployment, function routing & security response headers
 ├── robots.txt            # Search engine crawler directives
 ├── sitemap.xml           # XML sitemap with all page canonical URLs
 └── README.md             # This documentation

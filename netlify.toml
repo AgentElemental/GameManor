@@ -1,11 +1,12 @@
 # ====================================================================
 # Netlify Configuration — GameManor Launcher Website
-# Static site deployment configuration
+# Static site & serverless functions deployment configuration
 # ====================================================================
 
 [build]
   # When deployed from repository root with base set to "website"
   publish = "."
+  functions = "netlify/functions"
   # No build command required for pure static HTML/CSS/JS
   command = ""
 
@@ -18,7 +19,7 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://script.google.com https://script.googleusercontent.com;"
 
 # Long-term Caching for Immutable Static Assets
 [[headers]]
@@ -35,6 +36,23 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+# Serverless Functions API Rewrite
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Pretty Clean URLs for Contact and Bug Reports
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/bug-reports"
+  to = "/bug-reports.html"
+  status = 200
 
 # Custom 404 Error Handling
 [[redirects]]

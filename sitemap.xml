@@ -37,6 +37,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://gamemanor.app/bug-reports.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://gamemanor.app/privacy.html</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>yearly</changefreq>
