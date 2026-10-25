@@ -43,7 +43,27 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
-# Pretty Clean URLs for Contact and Bug Reports
+# Pretty Clean URLs for All Main Pages
+[[redirects]]
+  from = "/features"
+  to = "/features.html"
+  status = 200
+
+[[redirects]]
+  from = "/download"
+  to = "/download.html"
+  status = 200
+
+[[redirects]]
+  from = "/changelog"
+  to = "/changelog.html"
+  status = 200
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 200
+
 [[redirects]]
   from = "/contact"
   to = "/contact.html"
@@ -52,6 +72,11 @@
 [[redirects]]
   from = "/bug-reports"
   to = "/bug-reports.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
   status = 200
 
 # Custom 404 Error Handling
