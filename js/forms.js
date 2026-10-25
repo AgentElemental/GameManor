@@ -9,7 +9,7 @@ const GAMEMANOR_FORMS = (() => {
   const PROXY_ENDPOINT = '/api/submit-form';
 
   // Direct Google Apps Script Web App Endpoint
-  const DIRECT_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycby-VzmPPro92tUOmazZQBqDxTxYfDtF-hj8yoKYmTeUJu8q5vIKB8KkUYsz5IP1Tz-q/exec';
+  const DIRECT_APPS_SCRIPT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxLjK2_TOmdtoAzqydBT0kMl0bprIMF_ylnpquVvIocjDCxEXS-ZGSGPysOwLiVe04/exec';
 
   // Google Forms Direct URLs (for fallback and prefill links)
   const GOOGLE_FORM_URLS = {
@@ -433,6 +433,13 @@ const GAMEMANOR_FORMS = (() => {
         </div>
       `;
     } else if (type === 'success') {
+      const isBug = (options.data && options.data.formType === 'bug') || (options.formType === 'bug');
+      const title = isBug ? 'Bug Report Successfully Received' : 'Submission Successfully Received';
+      const desc = isBug
+        ? 'Thank you for reporting this issue! Your bug report and diagnostics have been securely recorded and our team has been notified.'
+        : 'Thank you for contacting GameManor! Your message has been recorded and our team has been notified.';
+      const btnText = isBug ? 'Submit Another Bug Report' : 'Submit Another Message';
+
       bannerEl.innerHTML = `
         <div class="form-status-header">
           <div class="form-status-icon">
@@ -441,13 +448,13 @@ const GAMEMANOR_FORMS = (() => {
             </svg>
           </div>
           <div class="form-status-content">
-            <h3 class="form-status-title">Submission Successfully Received</h3>
+            <h3 class="form-status-title">${title}</h3>
             <p class="form-status-desc">
-              Thank you for contacting GameManor! Your message has been recorded and our team has been notified.
+              ${desc}
             </p>
             <div class="form-status-actions">
               <button type="button" class="btn btn-secondary reset-form-btn" style="font-size:0.88rem;padding:8px 16px;">
-                Submit Another Message
+                ${btnText}
               </button>
             </div>
           </div>
@@ -884,7 +891,8 @@ const GAMEMANOR_FORMS = (() => {
     submitPayload,
     buildPrefilledUrl,
     ATTACHMENT_LIMITS,
-    AttachmentManager
+    AttachmentManager,
+    renderStatus
   };
 })();
 window.GAMEMANOR_FORMS = GAMEMANOR_FORMS;

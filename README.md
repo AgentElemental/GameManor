@@ -132,3 +132,16 @@ The included `netlify.toml` automatically applies:
 - `Referrer-Policy: strict-origin-when-cross-origin`
 - Content Security Policy (CSP) scoped to Google Fonts and the public GitHub Releases API
 - Immutable long-term caching (`max-age=31536000`) for static icons and screenshots
+
+---
+
+## 7. Form Submission Service Architecture
+
+The **Contact Us** (`contact.html`) and **Bug Reports** (`bug-reports.html`) pages submit data through a server-side Netlify Function (`netlify/functions/submit-form.js`):
+
+- **Proxy Endpoint:** `/api/submit-form` (routed via `netlify.toml` rewrites to `/.netlify/functions/submit-form`).
+- **Google Apps Script Web App Deployment:**
+  `https://script.google.com/macros/s/AKfycbxLjK2_TOmdtoAzqydBT0kMl0bprIMF_ylnpquVvIocjDCxEXS-ZGSGPysOwLiVe04/exec`
+- **Why the Serverless Proxy Exists:** Browser POST requests with `Content-Type: application/json` trigger a CORS preflight (`OPTIONS`) check. Google Apps Script returns HTTP 200 on OPTIONS without CORS headers, which causes browsers to block the request. The Netlify function executes securely on Node.js, automatically follows Google 302 redirects, and relays the response with full CORS headers.
+- **Client Fallback:** If the site is served in a static environment where the Netlify Function is unavailable, `js/forms.js` provides prefilled official Google Form fallback links so users never lose their data.
+

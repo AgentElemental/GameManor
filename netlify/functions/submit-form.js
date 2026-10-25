@@ -15,7 +15,7 @@
 const https = require('https');
 const { URL } = require('url');
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby-VzmPPro92tUOmazZQBqDxTxYfDtF-hj8yoKYmTeUJu8q5vIKB8KkUYsz5IP1Tz-q/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxLjK2_TOmdtoAzqydBT0kMl0bprIMF_ylnpquVvIocjDCxEXS-ZGSGPysOwLiVe04/exec';
 
 function forwardToGoogleAppsScript(url, payloadString, redirectCount = 0) {
   return new Promise((resolve, reject) => {
@@ -118,7 +118,7 @@ exports.handler = async (event) => {
         headers: corsHeaders,
         body: JSON.stringify({
           success: false,
-          testMode: true,
+          testMode: false,
           message: 'Submission rejected.'
         })
       };
